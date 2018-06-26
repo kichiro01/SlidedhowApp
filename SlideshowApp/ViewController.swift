@@ -95,18 +95,21 @@ class ViewController: UIViewController {
             displayImage()
         }
     }
-      //画像タップ時の処理
-  
- 
     
+    //画像タップ時の処理
+  
     @IBAction func tap(_ sender: UITapGestureRecognizer) {
-          performSegue(withIdentifier: "closeup", sender: dispImageNo)
+        if self.timer == nil{
+            performSegue(withIdentifier: "closeup", sender: dispImageNo)
+        }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         if segue.identifier == "closeup" {
         // segueから遷移先のViewController2を取得する
         let resultViewController:ViewController2 = segue.destination as! ViewController2
         // 遷移先のViewController2で宣言しているx, yに値を代入して渡す
         resultViewController.x = dispImageNo
+        }
     }
   
    

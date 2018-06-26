@@ -12,39 +12,40 @@ class ViewController2: UIViewController {
 
     @IBOutlet weak var largeimageview: UIImageView!
     var x:Int = 0
-    
+    var dispImageNo = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
-        let dispImageNo = x
-        func   displayImage(){
-            
-            let imageNameArray = [
-                "images.jpeg",
-                "Unknown.jpeg",
-                "Unknown-1.jpeg",
-                "Unknown-2.jpeg",
-                ]
-            
-            // 表示している画像の番号から名前を取り出し
-            let name = imageNameArray[dispImageNo]
-            
-            // 画像を読み込み
-            let image = UIImage(named: name)
-            
-            // Image Viewに読み込んだ画像をセット
-            largeimageview.image = image
-        }
-        
-        
+      displayImage()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func   displayImage(){
+        
+        let dispImageNo = x
+       print(dispImageNo)
+        let imageNameArray = [
+            "images.jpeg",
+            "Unknown.jpeg",
+            "Unknown-1.jpeg",
+            "Unknown-2.jpeg",
+            ]
+        
+        // 表示している画像の番号から名前を取り出し
+        let name = imageNameArray[dispImageNo]
+        
+        // 画像を読み込み
+        let image = UIImage(named: name)
+        
+        // Image Viewに読み込んだ画像をセット
+        largeimageview.image = image
+    }
+    
     
     
     
