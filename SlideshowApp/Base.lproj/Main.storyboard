@@ -73,6 +73,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bottonback" destination="FWB-Xf-erE" id="b7Y-zc-rZ1"/>
+                        <outlet property="bottonforward" destination="NKx-Kw-KFP" id="F1Z-Hd-fm1"/>
                         <outlet property="bottonlabel" destination="eQK-uM-3Tg" id="Qxj-7e-nWw"/>
                         <outlet property="imageview" destination="YYK-2Z-aiD" id="x5g-3e-xYh"/>
                         <segue destination="nCa-uz-sgc" kind="show" identifier="closeup" id="jZn-3P-W6A"/>
